@@ -3,7 +3,7 @@
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
     <header class="masthead mb-auto">
       <div class="inner">
-        <h3 class="masthead-brand dash-brand">Pawn Shop</h3>
+        <h3 class="masthead-brand dash-brand">Auction Shop</h3>
         <nav class="nav nav-masthead justify-content-center">
             @if (Route::has('login'))
                 @auth
@@ -24,12 +24,13 @@
     </header>
 
     <main role="main" class="inner cover">
-      <h1 class="cover-heading dash-brand">Pawn Shop</h1>
+      <h1 class="cover-heading dash-brand">Auction Shop</h1>
       <p class="lead">
-        [sub description about this website]
+        Win auctions and make profit now! <br>
+        Look now for a rare items you want!
       </p>
       <p class="lead">
-      <a href="{{url('/learn')}}" class="btn btn-lg btn-secondary">More Info</a>
+      <a href="{{url('/learn')}}" class="btn btn-lg btn-warning">More Info</a>
       </p>
     </main>
 

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,18 +15,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/test', function(){
     return view('pages.welcome');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('password/reset', 'ForgotPasswordController@showLinkRequestForm')->name('password.reset');
-Route::post('password/email', 'ForgotPasswordController@sendResetLinkEmail')->name('password.email');
-Route::get('password/reset/{token}', 'ResetPasswordController@showResetForm')->name('password.reset.token');
-Route::post('password/reset', 'ResetPasswordController@reset');
+Route::get('/change-password', 'ChangePasswordController@index');
+Route::post('/change-password', 'ChangePasswordController@store')->name('change.password');
