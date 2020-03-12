@@ -104,5 +104,8 @@ class phoneController extends Controller
     public function destroy($id)
     {
         //
+        $numid = phone::find($id);
+        $numid->delete();
+        return redirect('/account')->with('successfully delete on of your contact number');
     }
 }

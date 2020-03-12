@@ -1,3 +1,5 @@
+<img src="sample1.PNG" alt="My cool logo"/>
+
 # Members
     - Darwin Llacuna (web and system Developer) > Programmer.
     - Justin Cinco (layout Designer) > project manager.
