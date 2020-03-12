@@ -1,4 +1,4 @@
-<img src="sample1.PNG" alt="My cool logo"/>
+<center><img src="sample1.PNG" alt="My cool logo"/></center>
 
 # Members
     - Darwin Llacuna (web and system Developer) > Programmer.
