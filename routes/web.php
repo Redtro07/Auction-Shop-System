@@ -21,5 +21,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('/account', 'phoneController');
+
 Route::get('/change-password', 'ChangePasswordController@index');
 Route::post('/change-password', 'ChangePasswordController@store')->name('change.password');

@@ -4,4 +4,4 @@
     - Aubrey Joy Araza > business management.
 # Updates
     1. Complete Welcome page Design - 100%
-    2. Complete Basic user settings and Information - 30%
+    2. Complete Basic user settings and Information - 23%
