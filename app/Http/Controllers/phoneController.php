@@ -30,6 +30,7 @@ class phoneController extends Controller
     public function create()
     {
         //
+        return 'test';
     }
 
     /**
@@ -106,6 +107,6 @@ class phoneController extends Controller
         //
         $numid = phone::find($id);
         $numid->delete();
-        return redirect('/account')->with('successfully delete on of your contact number');
+        return 'check';
     }
 }

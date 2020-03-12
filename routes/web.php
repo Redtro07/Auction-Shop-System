@@ -18,11 +18,8 @@ Route::get('/', function () {
     return view('pages.welcome');
 });
 
-Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
-
 Route::resource('/account', 'phoneController');
-
+Auth::routes();
 Route::get('/change-password', 'ChangePasswordController@index');
 Route::post('/change-password', 'ChangePasswordController@store')->name('change.password');

@@ -40,7 +40,7 @@
                 @if (count($usersConNumbers) > 0)
                   @foreach ($usersConNumbers as $usersConNumber)
                       <div class="badge badge-success">
-                      <a href="/account/{{$usersConNumber->id}}" style="color: #fff;">{{$usersConNumber->phone_number}}</a>
+                      <a href="/account/destroy/{{$usersConNumber->id}}" style="color: #fff;">{{$usersConNumber->phone_number}} | id: {{$usersConNumber->id}}</a>
                       </div>
                   @endforeach
                 @else
@@ -64,31 +64,33 @@
                 {!! FORM::close() !!}
             </div>
         </div>
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Add New Number</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                    {!! FORM::open(['action' => 'phoneController@store','method' => 'post']) !!}
-
-                    <div class="form-group">
-                        {{FORM::text('number','',['class' => 'form-control', 'placeholder' => '+63'])}}
-                        <br>
-                        {{Form::select('type', ['Mobile' => 'Mobile', 'Telephone' => 'Telephone'], 'Mobile')}}
-                      </div>
-                        {{FORM::submit('submit',['class' => 'btn btn-success'])}}
-                    {!! FORM::close() !!}
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-              </div>
-            </div>
     </div>
+
+    {{-- Model Complitation --}}
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Add New Number</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                {!! FORM::open(['action' => 'phoneController@store','method' => 'post']) !!}
+
+                <div class="form-group">
+                    {{FORM::text('number','',['class' => 'form-control', 'placeholder' => '+63'])}}
+                    <br>
+                    {{Form::select('type', ['Mobile' => 'Mobile', 'Telephone' => 'Telephone'], 'Mobile')}}
+                  </div>
+                    {{FORM::submit('submit',['class' => 'btn btn-success'])}}
+                {!! FORM::close() !!}
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
 @endsection
